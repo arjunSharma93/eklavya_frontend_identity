@@ -202,3 +202,66 @@ form span {
 .home-page-title {
   color: #222
 }
+
+.welcome-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Title styling */
+.welcome-title {
+  color: #007bff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Message styling */
+.welcome-message {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Logout button styling */
+.logout-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #dc3545; /* Red color for logout button */
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 20px;
+  }
+  
+  .welcome-title {
+    font-size: 2em;
+  }
+  
+  .welcome-message {
+    font-size: 1em;
+  }
+  
+  .logout-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
