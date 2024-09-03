@@ -246,7 +246,7 @@ form span {
   background-color: #c82333; /* Darker red on hover */
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
   .welcome-container {
     padding: 20px;
@@ -265,3 +265,84 @@ form span {
     font-size: 0.9em;
   }
 }
+
+/* Ensure the html and body take full height and remove default margins */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Container styling */
+.login-container {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #333; /* Adjust to match your theme */
+
+  /* Center the container horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Heading styling */
+.login-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px; /* Space between header and form */
+}
+
+/* Error message styling */
+.error {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button.login {
+  background-color: #007bff;
+}
+
+.button.logout {
+  background-color: #dc3545;
+}
+
+.button.verify {
+  background-color: #007bff;
+}
+
+.button.back {
+  background-color: #6c757d;
+}
+
+.button.resend {
+  background-color: #28a745;
+}
+
