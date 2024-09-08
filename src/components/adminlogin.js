@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Loginpage.css'; // Ensure this path matches your project structure
+//import './Loginpage.css'; // Ensure this path matches your project structure
 
 const generateOTP = () => {
   return Math.floor(100000 + Math.random() * 900000).toString(); 
