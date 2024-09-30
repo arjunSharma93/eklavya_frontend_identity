@@ -5,6 +5,8 @@ import RegisterForm from './components/register';
 import LoginForm from './components/login';
 import Home from './components/home';
 import About from './components/about';
+import PrivateRoutes from './components/PrivateRoutes'
+//const PrivateRoutes = require('./components/PrivateRoutes');
 
 function App() {
   return (
@@ -20,8 +22,10 @@ function App() {
           </Nav>
 
           <Routes>
-            <Route path="/" Component={Home}/>
-            <Route path="/about" Component={About}/>
+            <Route element={<PrivateRoutes/>}>
+              <Route path="/" Component={Home}/>
+              <Route path="/about" Component={About}/>
+            </Route>
             <Route path="/register" Component={RegisterForm}/>
             <Route path="/login" Component={LoginForm}/>
           </Routes>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Navigate } from "react-router-dom";
 
 
 export default function RegisterForm(){
@@ -15,13 +16,25 @@ export default function RegisterForm(){
             }
         });
         const category1 = watch("category1");
+        //const navigate = useNavigate();
+
          return(
             <div className="text-center">
                <form onSubmit={handleSubmit(async (data) => {
+
+            const options = {
+            method: 'POST',
+            url: 'http://localhost:3000/api/auth/register',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(data)
+            };
                     console.log(data);
-                    fetch("").then((res) => {
+                    fetch("http://localhost:3000/api/auth/register", options).then((res) => {
                         res.json().then((result) => {
                             console.warn(result);
+                            Navigate('/');
                         })
                     })
                })}>
